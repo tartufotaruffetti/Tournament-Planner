@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 
+# -*- coding: iso-8859-15 -*-
 # tournament.py -- implementation of a Swiss-system tournament
 #
 '''
