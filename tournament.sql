@@ -30,7 +30,7 @@
 			CONNECTION LIMIT = -1;
 --  if you are using the vagrant VM you need to log into the new 
 --  databse to create table and view within this DDBB
-	\c tournament
+	\c tournament;
 	
 --  creating the player table
 	CREATE TABLE Player(
