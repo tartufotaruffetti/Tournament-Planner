@@ -28,7 +28,10 @@
 			--LC_COLLATE = 'Spanish_Spain.1252'
 			--LC_CTYPE = 'Spanish_Spain.1252'
 			CONNECTION LIMIT = -1;
-			
+--  if you are using the vagrant VM you need to log into the new 
+--  databse to create table and view within this DDBB
+	\c tournament
+	
 --  creating the player table
 	CREATE TABLE Player(
 		id SERIAL PRIMARY KEY,
