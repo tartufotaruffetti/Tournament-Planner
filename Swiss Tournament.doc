@@ -1,0 +1,37 @@
+A Swiss-system tournament is a tournament which uses a non-elimination format. There are several rounds of competition, but considerably fewer rounds than in a round-robin tournament, so each competitor (team or individual) does not play every other competitor. Competitors meet one-to-one in each round and are paired using a predetermined set of rules designed to ensure that as far as possible a competitor plays competitors with the same current score, subject to not playing the same opponent more than once. The winner is the competitor with the highest aggregate points earned in all rounds.
+
+A Swiss system may be used when it is not feasible to play as many rounds as required in a round-robin, but it is not desired to eliminate any competitors before the end of the tournament.[1] This is the case for many tournaments of amateurs where the tournament's purpose is to provide playing experiences, and if continuing full use of facilities is not too expensive. On the other hand, if facilities are constrained or costly, if players are professionals who must in expected terms be paid for their games played, and if the tournament's purpose is to present exciting matches of top contenders to a viewing audience, then single elimination would serve better. In a Swiss system there are a predetermined number of rounds and a predetermined scoring system. All competitors play in each round unless there is an odd number of competitors.
+
+During all but the first round, competitors are paired based on approximately how well (or poorly) they have performed so far. In the first round, competitors are paired either randomly or according to some pattern that has beem found to serve a given game or sport well. If it is desired for top-ranked participants to meet in the last rounds, the pattern must start them in different brackets, just the same as is done in seeding of pre-ranked players for a single elimination tournament.
+
+In subsequent rounds, competitors are sorted according to their cumulative scores and are assigned opponents with the same or similar score up to that point. Some adjustments may be made to assure that no two players ever oppose each other twice, or to even out advantages a player may have due to chance.
+
+The first tournament of this type was a chess tournament in Zurich in 1895, hence the name "Swiss system".[1]
+
+Swiss systems are commonly used in chess,[1][2] bridge, eSports, Morabaraba, Scrabble, squash, Pétanque (boules), Quiz bowl, Magic: The Gathering,[3] Policy Debate, Warhammer, eight-ball, Reversi, Dominion, Pokémon TCG,[4] Yu-Gi-Oh,[5] Blood Bowl, Guild Wars 2, Path of Exile, Android: Netrunner,[6] and other games.[citation needed]
+
+Relatively few Go tournaments use the Swiss system. Most amateur Go tournaments, at least in Europe and America, now use the McMahon system instead. Swiss-system tournaments must start with very unequal matches in the early rounds--"slaughter pairing" is the name of one initial pattern used--if the Swiss pairing rules applied subsequently are to allow the top players to meet in the latest rounds. The McMahon system is designed to give all players games against similarly skilled players all along, and to produce final standings that more accurately reflect the "true" current skill levels of players.[7][2]
+
+Round Robin pairings are suitable for a small number of competitors and rounds, as most or all players will play each other. The underlying assumption is that the player who has played all possible opponents and ends with the highest score, must be the winner. Elimination, or Sudden Death, pairings rapidly reduces the number of competitors, but may not necessarily result in the best possible competitor winning. Simple survival as a strategy may result in winning a competition against better opponents. Swiss Systems intend to provide a clear winner with a limited number of rounds and a potentially unlimited number of opponents. A Swiss System draw should result in a clear winner, without having to play all opponents as in Round Robin, and without a single bad result terminating participation.
+
+In chess, the terms Swiss and Monrad are both used, and denote systems with different pairing algorithms. The Monrad pairing system is commonly used in Denmark and Norway, while most of the rest of the world uses one of the Swiss systems defined by FIDE. In most other sports, only one format is used, and is known either as Monrad or Swiss.
+
+Example of a 16 Player Swiss Tournament:
+First round pairing is by random draw. For example, with 16 players they would be matched into 8 random pairs for the first round. For now, assume all games have a winner, and there are no draws.
+After the first round, there will be a group of 8 players with a score of 1 (win), and a group of 8 players with a score of 0 (loss). For the 2nd round, players in each scoring group will be paired against each other – 1’s versus 1’s and 0’s versus 0’s.
+After round 2, there will be three scoring groups:
+4 players who have won both games and have 2 points
+8 players who have won a game and lost a game and have 1 point
+4 players who have lost both games and have no points.
+Again, for round 3, players are paired with players in their scoring group. After the third round, the typical scoring groups will be:
+2 players who have won 3 games (3 points)
+6 players with 2 wins (2 points)
+6 players with 1 win (1 point)
+2 players with no wins (0 points)
+For the fourth (and in this case final) round, the process repeats, and players are matched with others in their scoring group. Note that there are only 2 players who have won all of their games so far – they will be matched against each other for the "championship" game. After the final round, we’ll have something that looks like this:
+1 player with 4 points – the winner!
+4 players with 3 points – tied for second place
+6 players with 2 points
+4 players with 1 point
+1 player with 0 points
+The Swiss system produces a clear winner in just a few rounds, no-one is eliminated and almost everyone wins at least one game, but there are many ties to deal with.
