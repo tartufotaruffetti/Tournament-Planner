@@ -12,12 +12,15 @@
 --the script creates the corresponding database for the used of
 --tournament.py
 
---  dropping the tables just in case they exist already
-	DROP VIEW IF EXISTS player_standings CASCADE;
-	DROP VIEW IF EXISTS player_games_won CASCADE;
-	DROP VIEW IF EXISTS player_games_played CASCADE;
-	DROP TABLE IF EXISTS Matches CASCADE;
-	DROP TABLE IF EXISTS Player CASCADE;
+--  dropping the tables just in case they exist already; just in case
+
+--	DROP VIEW IF EXISTS player_standings CASCADE;
+--	DROP VIEW IF EXISTS player_games_won CASCADE;
+--	DROP VIEW IF EXISTS player_games_played CASCADE;
+--	DROP TABLE IF EXISTS Matches CASCADE;
+--	DROP TABLE IF EXISTS Player CASCADE;
+
+--  we only need to drop the DDBB and everything else will be dropped
 	DROP DATABASE IF EXISTS tournament;
 
 --  creating the database with some options
@@ -28,6 +31,7 @@
 			--LC_COLLATE = 'Spanish_Spain.1252'
 			--LC_CTYPE = 'Spanish_Spain.1252'
 			CONNECTION LIMIT = -1;
+			
 --  if you are using the vagrant VM you need to log into the new 
 --  databse to create table and view within this DDBB
 	\c tournament;
