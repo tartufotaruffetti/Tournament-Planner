@@ -67,9 +67,11 @@ However, if you dont wanna use the Udacity VM:
 2. After you have installed the ddbb, create a database called tournament
 3. Edit the tournament.sql script by commenting the DROP DATABASE and the CREATE DATABASE lines
 4. Run the script
-5. Make sure you have install the psycopg2 (https://pypi.python.org/pypi/psycopg2) and bleach (https://pypi.python.org/pypi/bleach) module
-6. Edit the tournament.py ddbb connection in order to connect to your new installed ddbb
-7. Run the tournament_test.py and make sure there are no errors.
+5. Make sure you have python 2.7 intalled or intalled from https://www.python.org/
+6. Make sure you have install the psycopg2 (https://pypi.python.org/pypi/psycopg2) and bleach (https://pypi.python.org/pypi/bleach) module
+7. Using the IDLE or you favority IDE edit the tournament.py ddbb connection in order to connect to your new installed ddbb.
+8. Run the tournament_test.py and make sure there are no errors.
+9. If there are no errors you are ready to go, enjoy it!
 
 Everything was program with a Postgres DDBBB 9.3.6 and Python 2.7
 
