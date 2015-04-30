@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: iso-8859-15 -*-
+# -*- coding: UTF-8 -*-
 # Test cases for tournament.py
 
 #importing tournament (where we developed our code)
