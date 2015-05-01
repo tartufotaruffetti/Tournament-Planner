@@ -36,7 +36,9 @@ def connect():
     """Connect to the PostgreSQL database.Returns a database connection."""
     print "Connecting to database ->%s" % (CONN_STRING)
     try:
-        return psycopg2.connect(CONN_STRING)
+        db = psycopg2.connect(CONN_STRING)
+        cursor = db.cursor()
+        return db, cursor
     except Exception as e:
             print "Cannot connect to DB!!"
             print e.__doc__
@@ -48,10 +50,10 @@ def deleteMatches():
     """Remove all the match records from the database."""
     try:
         # get a connection
-        conn = connect()
+        conn, cursor = connect()
         # conn.cursor we get the cursor to perform queryes,
         # updates, deletes etc
-        cursor = conn.cursor()
+        # cursor = conn.cursor()
         try:
             # deleting entries from match table
             cursor.execute("""DELETE FROM matches;""")
@@ -63,10 +65,11 @@ def deleteMatches():
             conn.rollback()
             print e.__doc__
             print e.message
+        finally:
+            # closing the connection
+            conn.close()
     except:
         print "Cannot connect to DB, therefore wont delete matches from DB!!"
-    # closing the connection
-    conn.close()
 
 
 # delete all players from teh DDBB
@@ -74,10 +77,10 @@ def deletePlayers():
     """Remove all the player records from the database."""
     try:
         # get a connection
-        conn = connect()
+        conn, cursor = connect()
         # conn.cursor we get the cursor to perform queryes,
         # updates, deletes etc
-        cursor = conn.cursor()
+        # cursor = con.cursor()
         try:
             # deleting entries from player table
             cursor.execute("""DELETE FROM player;""")
@@ -89,10 +92,11 @@ def deletePlayers():
             conn.rollback()
             print e.__doc__
             print e.message
+        finally:
+            # closing the connection
+            conn.close()
     except:
         print "Cannot connect to DB, therefore wont delete player from DB!!"
-    # closing the connection
-    conn.close()
 
 
 # return the number of player available
@@ -100,10 +104,10 @@ def countPlayers():
     """Returns the number of players currently registered."""
     try:
         # get a connection
-        conn = connect()
+        conn, cursor = connect()
         # conn.cursor we get the cursor to perform queryes,
         # updates, deletes etc
-        cursor = conn.cursor()
+        # cursor = conn.cursor()
         # querying player table
         cursor.execute("SELECT COUNT(*) FROM player;")
         # retrieve the records from the database
@@ -111,8 +115,9 @@ def countPlayers():
         return records[0]
     except:
         print "Cannot connect to DB, therefore wont count player from DB!!"
-    # closing the connection
-    conn.close()
+    finally:
+        # closing the connection
+        conn.close()
 
 
 # add a player to the DDBB player table
@@ -129,10 +134,10 @@ def registerPlayer(name):
         name = bleach.clean(name)
         name = bleach.linkify(name)
         # get a connection
-        conn = connect()
+        conn, cursor = connect()
         # conn.cursor we get the cursor to perform queryes,
         # updates, deletes etc
-        cursor = conn.cursor()
+        # cursor = conn.cursor()
         try:
             # adding entries to player table
             cursor.execute("INSERT INTO player(name) VALUES (%s);", (name,))
@@ -144,10 +149,11 @@ def registerPlayer(name):
             conn.rollback()
             print e.__doc__
             print e.message
+        finally:
+            # closing the connection
+            conn.close()
     except:
         print "Cannot connect to DB, therefore wont delete player from DB!!"
-    # closing the connection
-    conn.close()
 
 
 def playerStandings():
@@ -166,10 +172,10 @@ def playerStandings():
     """
     try:
         # get a connection
-        conn = connect()
+        conn, cursor = connect()
         # conn.cursor we get the cursor to perform queryes,
         # updates, deletes etc
-        cursor = conn.cursor()
+        # cursor = conn.cursor()
         # adding entries to player table
         cursor.execute("""select
              player.id,
@@ -185,8 +191,9 @@ def playerStandings():
         return records
     except:
         print "Cannot connect to DB, therefore wont delete player from DB!!"
-    # closing the connection
-    conn.close()
+    finally:
+        # closing the connection
+        conn.close()
 
 
 def reportMatch(winner, loser):
@@ -203,10 +210,10 @@ def reportMatch(winner, loser):
         loser = bleach.clean(loser)
         loser = bleach.linkify(loser)
         # get a connection
-        conn = connect()
+        conn, cursor = connect()
         # conn.cursor we get the cursor to perform queryes,
         # updates, deletes etc
-        cursor = conn.cursor()
+        # cursor = conn.cursor()
         try:
             # adding entries to player table
             cursor.execute("""INSERT INTO matches(player1, player2, winner)
@@ -219,10 +226,11 @@ def reportMatch(winner, loser):
             conn.rollback()
             print e.__doc__
             print e.message
+        finally:
+            # closing the connection
+            conn.close()
     except:
         print "Cannot connect to DB, therefore wont delete player from DB!!"
-    # closing the connection
-    conn.close()
 
 
 def swissPairings():
@@ -240,10 +248,10 @@ def swissPairings():
     """
     try:
         # get a connection
-        conn = connect()
+        conn, cursor = connect()
         # conn.cursor we get the cursor to perform queryes,
         # updates, deletes etc
-        cursor = conn.cursor()
+        # cursor = conn.cursor()
         # adding entries to player table
         cursor.execute("""select player1, p1.name, player2, p2.name from
                          ( select
@@ -264,5 +272,6 @@ def swissPairings():
         return records
     except:
         print "Cannot connect to DB, therefore wont delete player from DB!!"
-    # closing the connection
-    conn.close()
+    finally:
+        # closing the connection
+        conn.close()
