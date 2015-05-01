@@ -44,6 +44,7 @@
 
 --  creating the matches table
 	CREATE TABLE Matches(
+		id_match SERIAL PRIMARY KEY,
 		player1 integer references Player (id),
 		player2 integer references Player (id),
 		winner integer references Player (id)
